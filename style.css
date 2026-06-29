@@ -92,11 +92,11 @@
   --container-width: 1120px;
   --header-height: 80px;
 
-   --z-background:0;
-    --z-overlay:1;
-    --z-content:2;
-    --z-header:100;
-    --z-modal:1000;
+  --z-background: 0;
+  --z-overlay: 1;
+  --z-content: 2;
+  --z-header: 100;
+  --z-modal: 1000;
 }
 
 /* =========================
@@ -152,13 +152,13 @@ ul {
    Layout
 ========================= */
 
-.container{
-    width:min(100% - 2rem, var(--container-width));
-    margin-inline:auto;
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
 }
 
-section{
-    padding:var(--space-9) 0;
+section {
+  padding: var(--space-9) 0;
 }
 
 /* =========================
@@ -197,7 +197,7 @@ nav ul {
 .hero-image {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: var(--z-background);
 }
 
 .hero-image img {
@@ -208,18 +208,17 @@ nav ul {
 
 #hero .container {
   position: relative;
-  z-index: 2;
+  z-index: var(--z-content);
 }
 
 .hero-text {
-  color:var(--clr-white);
+  color: var(--clr-white);
   max-width: 620px;
 }
 
 .hero-text h1 span {
   display: block;
 }
-
 
 #hero::after {
   content: "";
@@ -231,26 +230,26 @@ nav ul {
     rgba(10, 0, 20, 0.35),
     rgba(10, 0, 20, 0)
   );
-  z-index: 1;
+  z-index: var(--z-overlay);
 }
 
-.hero-greeting{
-    display: block;
-    font-family: var(--ff-handwritten);
-    font-size: 3rem;
-    font-weight:var(--fw-bold);
-    color: var(--clr-biscuit);
+.hero-greeting {
+  display: block;
+  font-family: var(--ff-handwritten);
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-biscuit);
 }
 
-.hero-title{
-    display: block;
-    font-family: var(--ff-display);
-    font-size: var(--fs-900);
-    font-weight: var(--fw-bold);
-   line-height:var(--lh-tight);
+.hero-title {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
 }
 
-.hero-highlight{
-    color: var(--clr-biscuit);
-    font-weight: var(--fw-semibold);
+.hero-highlight {
+  color: var(--clr-biscuit);
+  font-weight: var(--fw-semibold);
 }
