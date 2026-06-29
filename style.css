@@ -1,4 +1,105 @@
 /* =========================
+   Design System
+========================= */
+
+:root {
+  /* ===== Colours ===== */
+
+  --clr-space: #08061a;
+  --clr-space-light: #131033;
+
+  --clr-nebula: #8a2be2;
+  --clr-nebula-light: #b15cff;
+  --clr-nebula-dark: #5b1fa8;
+
+  --clr-electric: #54d6ff;
+
+  --clr-biscuit: #f7d89b;
+  --clr-biscuit-dark: #efc46a;
+
+  --clr-white: #fafafc;
+  --clr-grey-100: #e8e9f1;
+  --clr-grey-300: #bfc3d4;
+  --clr-grey-600: #62657a;
+  --clr-grey-900: #1d2035;
+
+  /* ===== Typography ===== */
+
+  --ff-display: "Space Grotesk", sans-serif;
+  --ff-body: "Inter", sans-serif;
+  --ff-code: "JetBrains Mono", monospace;
+  --ff-handwritten: "Caveat", cursive;
+
+  /* ===== Font Weights ===== */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ===== Font Sizes ===== */
+
+  --fs-900: clamp(3.5rem, 8vw, 5.5rem); /* Hero */
+  --fs-800: clamp(2.5rem, 6vw, 4rem); /* Section titles */
+  --fs-700: 2rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /* ===== Line Heights ===== */
+
+  --lh-tight: 1.1;
+  --lh-normal: 1.6;
+  --lh-loose: 1.8;
+
+  /* ===== Spacing ===== */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ===== Border Radius ===== */
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
+  --radius-pill: 999px;
+
+  /* ===== Shadows ===== */
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+  --shadow-glow: 0 0 25px rgba(138, 43, 226, 0.35);
+
+  /* ===== Transitions ===== */
+
+  --transition: 250ms ease;
+
+  /* ===== Layout ===== */
+
+  --container-width: 1120px;
+  --header-height: 80px;
+
+   --z-background:0;
+    --z-overlay:1;
+    --z-content:2;
+    --z-header:100;
+    --z-modal:1000;
+}
+
+/* =========================
    Base Reset
 ========================= */
 
@@ -14,8 +115,23 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  font-family: var(--ff-body);
+  color: var(--clr-grey-900);
+  background: var(--clr-white);
+  line-height: var(--lh-normal);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+code {
+  font-family: var(--ff-code);
 }
 
 img {
@@ -36,13 +152,13 @@ ul {
    Layout
 ========================= */
 
-.container {
-  width: min(100% - 2rem, 1120px);
-  margin-inline: auto;
+.container{
+    width:min(100% - 2rem, var(--container-width));
+    margin-inline:auto;
 }
 
-section {
-  padding: 5rem 0;
+section{
+    padding:var(--space-9) 0;
 }
 
 /* =========================
@@ -96,7 +212,7 @@ nav ul {
 }
 
 .hero-text {
-    color: #fff;
+  color:var(--clr-white);
   max-width: 620px;
 }
 
@@ -104,9 +220,6 @@ nav ul {
   display: block;
 }
 
-.hero-actions {
-  margin-top: 2rem;
-}
 
 #hero::after {
   content: "";
@@ -119,4 +232,25 @@ nav ul {
     rgba(10, 0, 20, 0)
   );
   z-index: 1;
+}
+
+.hero-greeting{
+    display: block;
+    font-family: var(--ff-handwritten);
+    font-size: 3rem;
+    font-weight:var(--fw-bold);
+    color: var(--clr-biscuit);
+}
+
+.hero-title{
+    display: block;
+    font-family: var(--ff-display);
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+   line-height:var(--lh-tight);
+}
+
+.hero-highlight{
+    color: var(--clr-biscuit);
+    font-weight: var(--fw-semibold);
 }
