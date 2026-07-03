@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <header class="site-header">
@@ -159,52 +160,50 @@
       <section id="journey">
         <div class="container">
           <div class="journey-heading">
-            <h2>Mission Log</h2>
-            <p>Every mission leaves a skill behind. Here's how mine came together.</p>
+            <h2>A little bit of my journey</h2>
+            <p>
+              Every mission leaves a skill behind. Here's how mine came
+              together.
+            </p>
           </div>
 
           <div class="journey-grid">
+            <a class="journey-card" href="journey.html">
+              <div class="journey-icon"><i data-lucide="music-4"></i></div>
+              <h3>Music</h3>
+              <p>Discipline & Creativity</p>
+            </a>
 
             <a class="journey-card" href="journey.html">
-            <div class="journey-card">
-              <img
-                src="assets/images/music-school.png"
-                alt="Illustration of a Saxophone."
-              />
-              <h3>Music High School (Saxophone)</h3>
-            </div></a>
+              <div class="journey-icon"><i data-lucide="concierge-bell"></i></div>
+              <h3>Hospitality</h3>
+              <p>People & Process</p>
+            </a>
 
             <a class="journey-card" href="journey.html">
-            <div class="journey-card">
-              <img
-                src="assets/images/hospitality-bachelor.png"
-                alt="Illustration of a hotel."
-              />
-              <h3>Hospitality Bachelor's Degree</h3>
-            </div></a>
-
-            
-            <a class="journey-card" href="journey.html">
-            <div class="journey-card">
-              <img
-                src="assets/images/animation.png"
-                alt="Illustration of a cartoon character."
-              />
-              <h3>Animation & Graphic Design</h3>
-            </div></a>
+              <div class="journey-icon"><i data-lucide="film"></i></div>
+              <h3>Animation</h3>
+              <p>Visual Communication</p>
+            </a>
 
             <a class="journey-card" href="journey.html">
-            <div class="journey-card">
-              <img
-                src="assets/images/ux-ui.png"
-                alt="Illustration of a computer screen with UI elements."
-              />
-              <h3>UX/UI Design & Front-End</h3>
-            </div></a>
+              <div class="journey-icon">
+                <i data-lucide="heart-handshake"></i>
+              </div>
+              <h3>Community</h3>
+              <p>Connection & Inclusion</p>
+            </a>
+
+            <a class="journey-card" href="journey.html">
+              <div class="journey-icon">
+                <i data-lucide="monitor-smartphone"></i>
+              </div>
+              <h3>UX/UI & Front-End</h3>
+              <p>Problem Solving</p>
+            </a>
           </div>
 
-           <a href="journey.html" class="btn btn-outline">See Full Journey</a>
-
+          <a href="journey.html" class="btn btn-outline">See Full Journey</a>
         </div>
       </section>
 
@@ -243,6 +242,9 @@
         No cats were launched into space during the making of this portfolio.
       </p>
     </footer>
+    <script>
+      lucide.createIcons();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
