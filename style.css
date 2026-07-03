@@ -298,7 +298,7 @@ section {
   color: var(--clr-white);
   border-color: var(--clr-nebula-light);
   box-shadow: 0 0 18px rgba(177, 92, 255, 0.55);
-  transform:translateY(-2px)
+  transform: translateY(-2px);
 }
 
 .header-rail {
@@ -525,6 +525,9 @@ section {
 .project-card {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: 1px solid rgba(177, 116, 255, 0.28);
   border-radius: var(--radius-md);
   background: rgba(21, 16, 50, 0.72);
@@ -542,7 +545,7 @@ section {
   font-size: 1.3rem;
   color: var(--clr-biscuit);
 
-  opacity: .2;
+  opacity: 0.2;
   transform: translate(-6px, 6px);
 
   transition: 250ms ease;
@@ -569,6 +572,9 @@ section {
 
 .project-card-content {
   padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-card h3 {
@@ -585,6 +591,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  margin-top: auto;
 }
 
 .project-pills li {
@@ -596,19 +603,14 @@ section {
   color: var(--clr-grey-100);
 }
 
+/* =========================
+   Multiple Sections
+========================= */
 
-
-
-
-
-
-
-
-
-
-
-
-
+#journey,
+#contact {
+  padding-block: var(--space-10);
+}
 
 /* =========================
    Project Page
