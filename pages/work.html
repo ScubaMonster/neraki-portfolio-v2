@@ -104,12 +104,11 @@
               <span class="marker-trail"></span>
             </div>
 
-            <div
-              class="mission-thumbnail"
-              role="img"
-              aria-label="Matching Pets project thumbnail placeholder"
-            >
-              <span>Project thumbnail</span>
+            <div class="mission-thumbnail">
+              <img
+                src="../assets/images/matching-pets-thumbnail.png"
+                alt="Homepage of Matching Pets, featuring its personality-based pet adoption experience."
+              />
             </div>
 
             <div class="mission-content">
@@ -148,12 +147,11 @@
               <span class="marker-trail"></span>
             </div>
 
-            <div
-              class="mission-thumbnail"
-              role="img"
-              aria-label="Packing Assistant project thumbnail placeholder"
-            >
-              <span>Project thumbnail</span>
+            <div class="mission-thumbnail">
+              <img
+                src="../assets/images/packing-assistant-wip.jpg"
+                alt="Under-construction sign representing the Packing Assistant project in progress."
+              />
             </div>
 
             <div class="mission-content">
@@ -192,12 +190,11 @@
               <span class="marker-trail"></span>
             </div>
 
-            <div
-              class="mission-thumbnail"
-              role="img"
-              aria-label="Fiber Crafts project thumbnail placeholder"
-            >
-              <span>Project thumbnail</span>
+            <div class="mission-thumbnail">
+              <img
+                src="../assets/images/fiber-crafts-thumbnail.png"
+                alt="Yarn and Thread Crafts community survey form."
+              />
             </div>
 
             <div class="mission-content">
@@ -236,12 +233,11 @@
               <span class="marker-trail"></span>
             </div>
 
-            <div
-              class="mission-thumbnail"
-              role="img"
-              aria-label="Equal Rights project thumbnail placeholder"
-            >
-              <span>Project thumbnail</span>
+            <div class="mission-thumbnail mission-thumbnail--poster">
+              <img
+                src="../assets/images/equal-rights-thumbnail.jpg"
+                alt="Say Yes marriage equality campaign poster with a heart and Progress Pride colours."
+              />
             </div>
 
             <div class="mission-content">
@@ -280,12 +276,11 @@
               <span class="marker-trail"></span>
             </div>
 
-            <div
-              class="mission-thumbnail"
-              role="img"
-              aria-label="Blue Notes project thumbnail placeholder"
-            >
-              <span>Project thumbnail</span>
+            <div class="mission-thumbnail">
+              <img
+                src="../assets/images/blue-notes-thumbnail.JPG"
+                alt="Crocheted mouse playing a miniature saxophone in the Blue Notes stop-motion set."
+              />
             </div>
 
             <div class="mission-content">
@@ -325,11 +320,41 @@
             </div>
 
             <div
-              class="mission-thumbnail"
-              role="img"
-              aria-label="Photo Colorization project thumbnail placeholder"
+              class="mission-thumbnail comparison-slider"
+              data-comparison
+              style="--comparison-position: 50%"
             >
-              <span>Project thumbnail</span>
+              <img
+                class="comparison-image comparison-image--before"
+                src="../assets/images/gas-station-before.jpg"
+                alt="Historic black-and-white photograph of a rural gas station."
+              />
+              <img
+                class="comparison-image comparison-image--after"
+                src="../assets/images/gas-station-after.jpg"
+                alt="Colourised version of the same historic gas station photograph."
+              />
+
+              <span class="comparison-label comparison-label--before" aria-hidden="true">Before</span>
+              <span class="comparison-label comparison-label--after" aria-hidden="true">After</span>
+              <span class="comparison-divider" aria-hidden="true">
+                <span class="comparison-handle">
+                  <i data-lucide="chevrons-left-right"></i>
+                </span>
+              </span>
+
+              <label class="visually-hidden" for="colorization-comparison">
+                Reveal the colourised photograph
+              </label>
+              <input
+                id="colorization-comparison"
+                class="comparison-range"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-valuetext="50% original photograph visible"
+              />
             </div>
 
             <div class="mission-content">
@@ -393,6 +418,22 @@
 
     <script>
       lucide.createIcons();
+
+      document.querySelectorAll("[data-comparison]").forEach((comparison) => {
+        const range = comparison.querySelector(".comparison-range");
+
+        const updateComparison = () => {
+          const position = `${range.value}%`;
+          comparison.style.setProperty("--comparison-position", position);
+          range.setAttribute(
+            "aria-valuetext",
+            `${range.value}% original photograph visible`,
+          );
+        };
+
+        range.addEventListener("input", updateComparison);
+        updateComparison();
+      });
     </script>
     <script src="../script.js"></script>
   </body>
