@@ -834,6 +834,84 @@ section {
   color: var(--clr-grey-100);
 }
 
+.opportunity-status {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: center;
+
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  border: 1px solid rgba(111, 216, 255, 0.38);
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(111, 216, 255, 0.09),
+      rgba(177, 116, 255, 0.06)
+    );
+
+  box-shadow: inset 0 0 1.5rem rgba(111, 216, 255, 0.035);
+}
+
+.opportunity-status-icon {
+  position: relative;
+  width: 3.25rem;
+  height: 3.25rem;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  color: var(--clr-electric);
+  background: rgba(111, 216, 255, 0.1);
+}
+
+.opportunity-status-icon::after {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  right: 0.15rem;
+
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 2px solid var(--clr-space-light);
+  border-radius: 50%;
+
+  background: var(--clr-biscuit);
+  box-shadow: 0 0 0.7rem rgba(244, 209, 138, 0.7);
+}
+
+.opportunity-status-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.opportunity-status-copy {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.opportunity-status-label {
+  font-family: var(--ff-code);
+  font-size: var(--fs-100);
+  color: var(--clr-electric);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.opportunity-status-copy strong {
+  font-family: var(--ff-display);
+  font-size: var(--fs-300);
+  color: var(--clr-white);
+}
+
+.opportunity-status-copy > span:last-child {
+  font-size: var(--fs-200);
+  color: var(--clr-grey-300);
+}
+
 .contact-links {
   display: grid;
   gap: var(--space-3);
@@ -923,6 +1001,23 @@ section {
 .contact-form {
   position: relative;
   padding: var(--space-7);
+}
+
+.contact-form-heading {
+  max-width: 34rem;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid rgba(177, 116, 255, 0.22);
+}
+
+.contact-form-heading h3 {
+  margin-top: var(--space-2);
+  font-size: var(--fs-500);
+}
+
+.contact-form-heading > p:last-child {
+  margin-top: var(--space-2);
+  color: var(--clr-grey-300);
 }
 
 .contact-form::before {
@@ -1026,6 +1121,18 @@ section {
 
 .contact-submit:hover svg {
   transform: translate(0.2rem, -0.15rem);
+}
+
+
+@media (max-width: 540px) {
+  .opportunity-status {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunity-status-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
 }
 
 /* =========================
