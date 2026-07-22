@@ -3965,3 +3965,46 @@ section {
     transform: none;
   }
 }
+
+/* =========================================================
+   FIBER CRAFTS CASE STUDY
+   Add after the shared case-study CSS.
+========================================================= */
+
+.case-study-page--fiber {
+  --case-accent: #76e6b2;
+  --case-accent-rgb: 118, 230, 178;
+  --case-secondary: #f4d18a;
+}
+
+.case-study-page--fiber .case-hero {
+  background:
+    radial-gradient(circle at 78% 28%, rgba(118, 230, 178, 0.16), transparent 25rem),
+    radial-gradient(circle at 18% 74%, rgba(244, 209, 138, 0.08), transparent 22rem),
+    linear-gradient(180deg, var(--clr-space-deep), var(--clr-space));
+}
+
+.case-study-page--fiber .case-orbit {
+  border-color: rgba(118, 230, 178, .34);
+  transform: rotate(10deg);
+}
+
+.case-study-page--fiber .case-device--desktop {
+  transform: rotate(1.5deg);
+}
+
+.case-study-page--fiber .case-handwritten,
+.case-study-page--fiber .case-process li:not(:last-child)::after,
+.case-study-page--fiber .case-reflection-grid span {
+  color: var(--clr-biscuit);
+}
+
+.case-process {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-3);
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
