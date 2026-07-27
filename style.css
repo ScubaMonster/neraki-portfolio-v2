@@ -3331,7 +3331,8 @@ section {
 .case-device--desktop img {
   width: 100%;
   height: calc(100% - .7rem);
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   border-radius: .65rem;
 }
 
@@ -3344,6 +3345,14 @@ section {
   padding: .45rem;
   border-radius: 1.35rem;
   transform: rotate(5deg);
+}
+
+.case-device--mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+  border-radius: .95rem;
 }
 
 .case-device-placeholder,
@@ -3680,6 +3689,28 @@ section {
 
 .case-gallery .case-media-frame {
   min-height: 20rem;
+}
+
+.case-gallery .case-media-frame--image {
+  min-height: 0;
+  aspect-ratio: 16 / 11;
+}
+
+.case-media-frame--image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-media-frame--contain {
+  padding: var(--space-3);
+  background: rgba(249, 248, 253, .04);
+}
+
+.case-media-frame--contain img {
+  object-fit: contain;
+  border-radius: calc(var(--radius-lg) - var(--space-3));
 }
 
 .case-solution-intro {

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Matching Pets decision journey</title>
+  <desc id="desc">A user can browse pets freely or answer lifestyle questions. Both routes lead to honest pet profiles, real-life compatibility checks and a thoughtful adoption decision.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbf7"/>
+      <stop offset="1" stop-color="#eef7f4"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1l10 5-10 5z" fill="#8aa6a8"/>
+    </marker>
+    <style>
+      text{font-family:Poppins,Arial,sans-serif;fill:#173f4a}
+      .eyebrow{font-size:18px;font-weight:600;letter-spacing:3px;fill:#dd6b55}
+      .heading{font-size:50px;font-weight:600;letter-spacing:-1px}
+      .intro{font-size:21px;fill:#537077}
+      .node-title{font-size:21px;font-weight:600}
+      .node-title.compact{font-size:18px}
+      .node-copy{font-size:16px;fill:#607a80}
+      .on-dark{fill:#fff}
+      .on-dark-soft{fill:#d7e7e6}
+      .number{font-size:15px;font-weight:600;fill:#fff}
+      .branch{font-size:15px;font-weight:600;fill:#537077;letter-spacing:1px}
+      .callout-title{font-size:18px;font-weight:600}
+      .callout-copy{font-size:15px;fill:#607a80}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#background)"/>
+  <circle cx="1480" cy="90" r="210" fill="#ffd8cf" opacity=".42"/>
+  <circle cx="90" cy="1020" r="240" fill="#cce8df" opacity=".55"/>
+
+  <text x="80" y="88" class="eyebrow">MATCHING PETS · DECISION JOURNEY</text>
+  <text x="80" y="150" class="heading">Browse with your heart. Decide with clarity.</text>
+  <text x="80" y="202" class="intro">Two entry paths preserve emotional discovery while guiding people toward realistic compatibility.</text>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#8aa6a8" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M310 402H440"/>
+    <path d="M680 356C760 356 760 305 840 305"/>
+    <path d="M680 448C760 448 760 555 840 555"/>
+    <path d="M1080 305C1165 305 1165 430 1240 430"/>
+    <path d="M1080 555C1165 555 1165 430 1240 430"/>
+    <path d="M1360 540V650"/>
+    <path d="M1240 754H1080"/>
+    <path d="M840 754H680"/>
+  </g>
+
+  <!-- first node -->
+  <g>
+    <rect x="80" y="322" width="230" height="160" rx="28" fill="#fff"/>
+    <circle cx="118" cy="360" r="20" fill="#dd6b55"/>
+    <text x="113" y="366" class="number">1</text>
+    <text x="112" y="410" class="node-title">Discover</text>
+    <text x="112" y="441" class="node-copy">Personality +</text>
+    <text x="112" y="466" class="node-copy">compatibility</text>
+  </g>
+
+  <!-- decision node -->
+  <g>
+    <rect x="440" y="322" width="240" height="160" rx="28" fill="#fff"/>
+    <circle cx="478" cy="360" r="20" fill="#dd6b55"/>
+    <text x="473" y="366" class="number">2</text>
+    <text x="472" y="410" class="node-title">Choose a path</text>
+    <text x="472" y="441" class="node-copy">Browse freely or</text>
+    <text x="472" y="466" class="node-copy">ask for guidance</text>
+  </g>
+
+  <text x="756" y="286" class="branch">BROWSE</text>
+  <text x="742" y="536" class="branch">GUIDANCE</text>
+
+  <!-- two paths -->
+  <g>
+    <rect x="840" y="225" width="240" height="160" rx="28" fill="#fff3ef"/>
+    <circle cx="878" cy="263" r="20" fill="#dd6b55"/>
+    <text x="873" y="269" class="number">3</text>
+    <text x="872" y="313" class="node-title">Browse freely</text>
+    <text x="872" y="344" class="node-copy">Keep room for</text>
+    <text x="872" y="369" class="node-copy">“love at first sight”</text>
+  </g>
+
+  <g>
+    <rect x="840" y="475" width="240" height="160" rx="28" fill="#e5f3ee"/>
+    <circle cx="878" cy="513" r="20" fill="#398477"/>
+    <text x="873" y="519" class="number">3</text>
+    <text x="872" y="563" class="node-title">Answer questions</text>
+    <text x="872" y="594" class="node-copy">Lifestyle · home · time</text>
+    <text x="872" y="619" class="node-copy">activity · experience</text>
+  </g>
+
+  <!-- merge -->
+  <g>
+    <rect x="1240" y="350" width="240" height="190" rx="28" fill="#173f4a"/>
+    <circle cx="1278" cy="388" r="20" fill="#f29a85"/>
+    <text x="1273" y="394" class="number">4</text>
+    <text x="1272" y="438" class="node-title on-dark">Explore profiles</text>
+    <text x="1272" y="469" class="node-copy on-dark-soft">Warm personality labels</text>
+    <text x="1272" y="494" class="node-copy on-dark-soft">+ honest care needs</text>
+    <text x="1272" y="519" class="node-copy on-dark-soft">including difficult cases</text>
+  </g>
+
+  <!-- return path -->
+  <g>
+    <rect x="1240" y="650" width="240" height="208" rx="28" fill="#fff"/>
+    <circle cx="1278" cy="688" r="20" fill="#398477"/>
+    <text x="1273" y="694" class="number">5</text>
+    <text x="1272" y="738" class="node-title compact">Compare with real life</text>
+    <text x="1272" y="769" class="node-copy">Needs · routine · home</text>
+    <text x="1272" y="794" class="node-copy">training · expectations</text>
+    <rect x="1272" y="816" width="169" height="26" rx="13" fill="#e5f3ee"/>
+    <text x="1286" y="835" class="node-copy" font-size="13">Compatibility, not certainty</text>
+  </g>
+
+  <g>
+    <rect x="840" y="674" width="240" height="160" rx="28" fill="#fff"/>
+    <circle cx="878" cy="712" r="20" fill="#dd6b55"/>
+    <text x="873" y="718" class="number">6</text>
+    <text x="872" y="762" class="node-title compact">Consider the match</text>
+    <text x="872" y="793" class="node-copy">Prioritised suggestions,</text>
+    <text x="872" y="818" class="node-copy">not a scientific promise</text>
+  </g>
+
+  <g>
+    <rect x="440" y="674" width="240" height="160" rx="28" fill="#dd6b55"/>
+    <circle cx="478" cy="712" r="20" fill="#fff" opacity=".25"/>
+    <text x="473" y="718" class="number">7</text>
+    <text x="472" y="762" class="node-title compact on-dark">Decide thoughtfully</text>
+    <text x="472" y="793" class="node-copy on-dark">A life that can work</text>
+    <text x="472" y="818" class="node-copy on-dark">for person and pet</text>
+  </g>
+
+  <!-- supporting principles -->
+  <g>
+    <rect x="80" y="930" width="680" height="112" rx="24" fill="#fff" stroke="#cfe1df"/>
+    <text x="112" y="970" class="callout-title">Warm, but realistic</text>
+    <text x="112" y="1001" class="callout-copy">Playful categories feel welcoming; honest profiles include demanding cases.</text>
+    <text x="112" y="1026" class="callout-copy">The goal is an informed bond—not a perfect-looking result.</text>
+
+    <rect x="790" y="930" width="730" height="112" rx="24" fill="#fff" stroke="#cfe1df"/>
+    <text x="822" y="970" class="callout-title">Designed around decisions, not pages</text>
+    <text x="822" y="1001" class="callout-copy">Users can begin emotionally, request guidance when needed, and then compare compatibility</text>
+    <text x="822" y="1026" class="callout-copy">before taking the next step toward adoption.</text>
+  </g>
+</svg>
