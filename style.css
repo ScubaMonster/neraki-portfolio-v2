@@ -3960,6 +3960,137 @@ section {
   }
 }
 
+/* ---------- Equal Rights + Photo Colorization real artwork ---------- */
+
+.campaign-emblem {
+  overflow: hidden;
+}
+
+.campaign-emblem img,
+.archive-frame img,
+.archive-comparison .comparison-image img,
+.campaign-context-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-exploration-grid--process {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.campaign-exploration-grid--process .campaign-sketch-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #f5f3ed;
+  border-radius: 0.75rem;
+}
+
+.campaign-sketch-card figcaption strong {
+  color: var(--clr-white);
+}
+
+.campaign-final-stage {
+  flex-direction: column;
+}
+
+.campaign-final-stage > img {
+  width: min(100%, 34rem);
+  max-height: 44rem;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 5rem rgba(7, 4, 18, 0.35);
+}
+
+.campaign-final-stage figcaption {
+  max-width: 34rem;
+  margin-top: var(--space-5);
+  color: var(--clr-grey-300);
+  text-align: center;
+}
+
+.campaign-system-board--artwork {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.campaign-system-board--artwork img {
+  width: 100%;
+  height: 100%;
+  min-height: 26rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.campaign-context-grid--process {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.campaign-context-grid--process .campaign-context-card {
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  transform: none;
+  background: #f5f3ed;
+}
+
+.campaign-context-grid--process .campaign-context-card img {
+  object-fit: contain;
+}
+
+.archive-frame {
+  overflow: hidden;
+}
+
+.archive-frame img {
+  border-radius: 0.2rem;
+}
+
+.archive-detail-image {
+  height: 18rem;
+  overflow: hidden;
+}
+
+.archive-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.8);
+}
+
+.archive-detail-image--clothing img {
+  object-position: 64% 66%;
+}
+
+.archive-detail-image--portrait img {
+  object-position: 48% 59%;
+}
+
+.archive-detail-image--environment img {
+  object-position: 13% 62%;
+}
+
+@media (max-width: 1000px) {
+  .campaign-exploration-grid--process,
+  .campaign-context-grid--process {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .campaign-exploration-grid--process,
+  .campaign-context-grid--process,
+  .campaign-system-board--artwork {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-system-board--artwork img {
+    min-height: 0;
+    aspect-ratio: 724 / 1024;
+  }
+}
+
 @media (max-width: 520px) {
   .case-snapshot,
   .case-process,
