@@ -4277,6 +4277,38 @@ section {
   color: var(--clr-biscuit);
 }
 
+.fiber-evolution-card {
+  display: grid;
+  grid-template-rows: clamp(14rem, 22vw, 18rem) auto;
+  aspect-ratio: auto !important;
+}
+
+.fiber-evolution-card img {
+  min-height: 0;
+  height: 100%;
+  object-position: top;
+}
+
+.fiber-evolution-card--mobile img {
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.fiber-evolution-card figcaption {
+  padding: var(--space-4);
+  border-top: 1px solid rgba(var(--case-accent-rgb), .3);
+  color: var(--clr-grey-300);
+  background: rgba(15, 11, 39, .92);
+}
+
+.fiber-evolution-card figcaption strong {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--ff-display);
+  color: var(--clr-white);
+}
+
 .case-process {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
