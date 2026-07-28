@@ -24,6 +24,7 @@
   </head>
 
   <body class="case-study-page case-study-page--packing">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="header-left">
         <svg
@@ -68,7 +69,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="case-hero" aria-labelledby="case-title">
         <div class="container">
           <a class="case-back-link" href="work.html">
@@ -242,82 +243,170 @@
         <div class="container">
           <div class="case-section-heading">
             <div>
-              <p class="case-section-code">04_PLANNED_APPROACH</p>
-              <h2>A product journey built around useful questions.</h2>
+              <p class="case-section-code">04_EARLY_DEFINITION</p>
+              <h2>Turning a familiar routine into a decision system.</h2>
             </div>
             <p>
-              This is the working project plan. The case study will be updated
-              with evidence and iterations as each stage is completed.
+              I began by unpacking how I already make packing decisions:
+              identify what every trip needs, then add or adjust items only
+              when the trip context makes them relevant.
             </p>
           </div>
 
-          <ol class="case-process" aria-label="Planned project process">
+          <ol class="case-process" aria-label="Project process">
             <li>
               <span>01</span>
               <i data-lucide="search"></i>
               <h3>Research</h3>
-              <p>Explore packing habits, forgotten items and planning pain points.</p>
+              <p>Externalise my existing packing habits and the details that change a list.</p>
             </li>
             <li>
               <span>02</span>
               <i data-lucide="crosshair"></i>
               <h3>Define</h3>
-              <p>Prioritise the information needed for useful recommendations.</p>
+              <p>Separate stable essentials, conditional items and quantity rules.</p>
             </li>
             <li>
               <span>03</span>
               <i data-lucide="route"></i>
               <h3>Map</h3>
-              <p>Shape the path from trip setup to an editable packing list.</p>
+              <p>Translate trip inputs into clear recommendation layers.</p>
             </li>
             <li>
               <span>04</span>
               <i data-lucide="panels-top-left"></i>
               <h3>Prototype</h3>
-              <p>Test progressive questions, list controls and planning states.</p>
+              <p>Next: turn the decision model into progressive questions and list states.</p>
             </li>
             <li>
               <span>05</span>
               <i data-lucide="users"></i>
               <h3>Test</h3>
-              <p>Observe whether travellers understand and trust the suggestions.</p>
+              <p>Next: check whether travellers understand and trust the suggestions.</p>
             </li>
             <li>
               <span>06</span>
               <i data-lucide="refresh-cw"></i>
               <h3>Iterate</h3>
-              <p>Refine the flow, content and level of personalisation.</p>
+              <p>Next: refine the flow, content and degree of personalisation.</p>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="case-section packing-research">
+        <div class="container">
+          <div class="case-section-heading">
+            <div>
+              <p class="case-section-code">05_RESEARCH_NOTES</p>
+              <h2>The first artefact was the logic—not the interface.</h2>
+            </div>
+            <p>
+              These handwritten notes capture the project selection, initial
+              categories and the first version of the recommendation rules.
+            </p>
+          </div>
+
+          <div class="packing-notes-grid">
+            <figure class="packing-note-card packing-note-card--landscape">
+              <img
+                src="../assets/images/packing-assistant-project-map.jpg"
+                alt="Handwritten project-selection notes listing Packing Assistant inputs, outputs and example essentials"
+              />
+              <figcaption>
+                <strong>Project selection and scope</strong>
+                <span>
+                  Trip type, season, destination and duration became the
+                  inputs; essentials, clothing and special-item checklists
+                  became the output.
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="packing-note-card">
+              <img
+                src="../assets/images/packing-assistant-rules.jpg"
+                alt="Handwritten Packing Assistant notes defining essentials, conditional rules and quantity changes"
+              />
+              <figcaption>
+                <strong>Rule-system development</strong>
+                <span>
+                  A base list is expanded by trip type, season and destination,
+                  while duration changes quantities rather than the underlying
+                  categories.
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <aside class="packing-insight">
+            <i data-lucide="lightbulb" aria-hidden="true"></i>
+            <div>
+              <p class="case-section-code">KEY_LOGIC_CORRECTION</p>
+              <h3>Destination and season cannot be treated as shortcuts for one another.</h3>
+              <p>
+                A beach trip can happen in winter, and a mountain trip can
+                happen in summer. Destination determines activity-specific
+                items; season determines weather weight and layers. Keeping
+                those rules separate prevents confident but irrelevant advice.
+              </p>
+            </div>
+          </aside>
         </div>
       </section>
 
       <section class="case-section case-section--artifact">
         <div class="container case-artifact-grid">
           <div class="case-artifact-copy">
-            <p class="case-section-code">05_THE_CORE_FLOW</p>
-            <h2>From trip profile to packing progress.</h2>
+            <p class="case-section-code">06_THE_DECISION_MODEL</p>
+            <h2>Build from a stable base, then add only what applies.</h2>
             <p>
-              The intended flow collects a small set of meaningful details,
-              creates a grouped list and lets the traveller adjust every item
-              before tracking progress.
+              The concept does not begin with one enormous master list. It
+              combines four understandable rule layers, then gives the
+              traveller the final say over the generated checklist.
             </p>
 
             <ul class="case-check-list">
-              <li><i data-lucide="check"></i> Add destination, dates and luggage type</li>
-              <li><i data-lucide="check"></i> Select activities and personal priorities</li>
-              <li><i data-lucide="check"></i> Review transparent recommendations</li>
-              <li><i data-lucide="check"></i> Add, remove, edit and check off items</li>
+              <li><i data-lucide="check"></i> Begin with documents, chargers, toiletries and medication</li>
+              <li><i data-lucide="check"></i> Add trip-type items for business or leisure</li>
+              <li><i data-lucide="check"></i> Add season and activity-specific destination items</li>
+              <li><i data-lucide="check"></i> Adjust clothing quantities from the trip duration</li>
             </ul>
           </div>
 
-          <figure class="case-media-frame case-media-frame--placeholder">
-            <div>
-              <i data-lucide="route"></i>
-              <strong>Add the final user flow</strong>
-              <span>Recommended file: packing-assistant-user-flow.png</span>
+          <div class="packing-logic" aria-label="Packing recommendation logic">
+            <div class="packing-logic-input">
+              <span>01</span>
+              <i data-lucide="briefcase-business"></i>
+              <strong>Trip type</strong>
+              <small>Tone &amp; priorities</small>
             </div>
-          </figure>
+            <div class="packing-logic-input">
+              <span>02</span>
+              <i data-lucide="cloud-sun"></i>
+              <strong>Season</strong>
+              <small>Weight &amp; layers</small>
+            </div>
+            <div class="packing-logic-input">
+              <span>03</span>
+              <i data-lucide="map-pin"></i>
+              <strong>Destination</strong>
+              <small>Activity items</small>
+            </div>
+            <div class="packing-logic-input">
+              <span>04</span>
+              <i data-lucide="calendar-days"></i>
+              <strong>Duration</strong>
+              <small>Item quantities</small>
+            </div>
+            <div class="packing-logic-output">
+              <i data-lucide="list-checks"></i>
+              <div>
+                <small>GENERATED OUTPUT</small>
+                <strong>Editable packing plan</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -325,39 +414,35 @@
         <div class="container">
           <div class="case-section-heading">
             <div>
-              <p class="case-section-code">06_DESIGN_IN_PROGRESS</p>
-              <h2>The mission board is ready for the real work.</h2>
+              <p class="case-section-code">07_NEXT_VALIDATION_STEPS</p>
+              <h2>What still needs to be tested—not disguised as finished.</h2>
             </div>
             <p>
-              These placeholders can be replaced gradually as research,
-              wireframes and the interface take shape.
+              The rule system and product direction are defined. The next
+              phase is to find out whether the questions, explanations and
+              controls work for people beyond my own packing routine.
             </p>
           </div>
 
-          <div class="case-gallery case-gallery--three">
-            <figure class="case-media-frame case-media-frame--placeholder">
-              <div>
-                <i data-lucide="notebook-tabs"></i>
-                <strong>Research findings</strong>
-                <span>packing-assistant-research.png</span>
-              </div>
-            </figure>
-
-            <figure class="case-media-frame case-media-frame--placeholder">
-              <div>
-                <i data-lucide="layout-template"></i>
-                <strong>Early wireframes</strong>
-                <span>packing-assistant-wireframes.png</span>
-              </div>
-            </figure>
-
-            <figure class="case-media-frame case-media-frame--placeholder">
-              <div>
-                <i data-lucide="mouse-pointer-click"></i>
-                <strong>Interactive prototype</strong>
-                <span>packing-assistant-prototype.png</span>
-              </div>
-            </figure>
+          <div class="packing-next-grid">
+            <article>
+              <span>01</span>
+              <i data-lucide="messages-square"></i>
+              <h3>Compare routines</h3>
+              <p>Interview travellers with different trip types, needs and packing habits.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <i data-lucide="layout-template"></i>
+              <h3>Prototype the questions</h3>
+              <p>Test progressive setup, recommendation reasons and editable list controls.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <i data-lucide="triangle-alert"></i>
+              <h3>Test edge cases</h3>
+              <p>Challenge combinations such as winter beaches, summer mountains and mixed-purpose trips.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -366,7 +451,7 @@
         <div class="container">
           <div class="case-section-heading">
             <div>
-              <p class="case-section-code">07_DESIGN_PRINCIPLES</p>
+              <p class="case-section-code">08_DESIGN_PRINCIPLES</p>
               <h2>Three rules for a genuinely helpful assistant.</h2>
             </div>
           </div>
@@ -407,11 +492,11 @@
           </div>
           <div>
             <p class="case-section-code">MISSION_STATUS // IN_PROGRESS</p>
-            <h2>This suitcase is still being packed.</h2>
+            <h2>The foundation is packed. The product is not finished.</h2>
             <p>
-              The problem and initial product direction are defined. Research,
-              flows, prototypes and testing will replace the current
-              placeholders as the project develops.
+              The problem, core rules and initial product direction are now
+              documented. Broader user research, interface prototyping and
+              usability testing remain the next stages of the project.
             </p>
           </div>
         </div>
@@ -468,9 +553,6 @@
       </div>
     </footer>
 
-    <script>
-      lucide.createIcons();
-    </script>
     <script src="../script.js"></script>
   </body>
 </html>

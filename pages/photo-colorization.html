@@ -24,6 +24,7 @@
 </head>
 
 <body class="case-study-page case-study-page--colorization">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="header-left">
       <svg
@@ -68,7 +69,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="case-hero archive-hero" aria-labelledby="colorization-title">
   <div class="container">
     <a class="case-back-link" href="work.html">
@@ -287,26 +288,30 @@
           </p>
         </div>
 
-        <div class="comparison-slider archive-comparison" data-comparison-slider>
-          <div class="comparison-image comparison-image--after">
+        <div class="archive-reveal" data-archive-reveal>
+          <div class="archive-reveal__image archive-reveal__image--after">
             <img src="../assets/images/gas-station-after.jpg" alt="Colourized historical gas station photograph">
           </div>
 
-          <div class="comparison-image comparison-image--before" data-comparison-before>
+          <div class="archive-reveal__image archive-reveal__image--before">
             <img src="../assets/images/gas-station-before.jpg" alt="Original monochrome historical gas station photograph">
           </div>
 
-          <span class="comparison-label comparison-label--before">Original</span>
-          <span class="comparison-label comparison-label--after">Colourized</span>
+          <span class="archive-reveal__label archive-reveal__label--before">Original</span>
+          <span class="archive-reveal__label archive-reveal__label--after">Colourized</span>
 
-          <button
-            class="comparison-handle"
-            type="button"
-            data-comparison-handle
+          <div
+            class="archive-reveal__divider"
+            data-archive-reveal-divider
+            role="slider"
+            tabindex="0"
             aria-label="Drag to compare the original and colourized photograph"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="50"
           >
             <i data-lucide="chevrons-left-right" aria-hidden="true"></i>
-          </button>
+          </div>
         </div>
       </div>
     </section>
@@ -409,17 +414,17 @@
     <section class="case-next archive-next">
       <div class="container case-next-layout">
         <div>
-          <p class="case-section-code">NEXT_MISSION</p>
-          <h2>Blue Notes</h2>
+          <p class="case-section-code">MISSION_ARCHIVE</p>
+          <h2>Explore all work</h2>
           <p>
-            A stop-motion film exploring belonging, expectation and the courage
-            to follow a different rhythm.
+            Return to the full mission archive to revisit the complete
+            collection of UX, front-end and visual storytelling projects.
           </p>
         </div>
 
-        <a class="btn btn-outline" href="blue-notes.html">
-          Continue exploring
-          <i data-lucide="arrow-right" aria-hidden="true"></i>
+        <a class="btn btn-outline" href="work.html">
+          View all work
+          <i data-lucide="grid-2x2" aria-hidden="true"></i>
         </a>
       </div>
     </section>
@@ -475,11 +480,8 @@
   </footer>
 
   <script>
-    lucide.createIcons();
-
-    document.querySelectorAll("[data-comparison-slider]").forEach((slider) => {
-      const before = slider.querySelector("[data-comparison-before]");
-      const handle = slider.querySelector("[data-comparison-handle]");
+    document.querySelectorAll("[data-archive-reveal]").forEach((slider) => {
+      const handle = slider.querySelector("[data-archive-reveal-divider]");
       let dragging = false;
 
       const setPosition = (clientX) => {
@@ -489,7 +491,7 @@
           100
         );
 
-        before.style.width = `${position}%`;
+        slider.style.setProperty("--archive-reveal-position", `${position}%`);
         handle.style.left = `${position}%`;
         handle.setAttribute("aria-valuenow", Math.round(position));
       };
@@ -526,7 +528,7 @@
 
         if (next !== current) {
           event.preventDefault();
-          before.style.width = `${next}%`;
+          slider.style.setProperty("--archive-reveal-position", `${next}%`);
           handle.style.left = `${next}%`;
           handle.setAttribute("aria-valuenow", next);
         }
