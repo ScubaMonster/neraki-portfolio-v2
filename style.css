@@ -490,7 +490,14 @@ section {
   }
 }
 
-@media (max-width: 1000px) {
+/* Hide decorative metadata before it becomes compressed. */
+@media (max-width: 1400px) {
+  .header-data {
+    display: none;
+  }
+}
+
+@media (max-width: 1120px) {
   .site-header .nav-bar:not(.nav-bar--open) {
     display: none;
   }

@@ -47,7 +47,7 @@ if (header && navigation) {
   const updateHeader = () => {
     const currentScrollY = Math.max(window.scrollY, 0);
     const isNearTop = currentScrollY < 48;
-    const isMenuAvailable = !isNearTop || window.innerWidth <= 1000;
+    const isMenuAvailable = !isNearTop || window.innerWidth <= 1120;
 
     header.classList.toggle("site-header--hidden", !isNearTop);
     menuButton.classList.toggle(
